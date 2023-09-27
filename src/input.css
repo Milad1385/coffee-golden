@@ -136,6 +136,36 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* start services item */
+  .services::before , .services::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    background-color: #d1d5DB
+  }
+  @media (min-width:640px) {
+    .services::before , .services::after{
+      content: none;
+    }
+  }
+
+  html.dark .services::before , html.dark .services::after{
+    background-color: white;
+    opacity: 0.1
+  }
+
+
+  .services::before{
+    width: 1px;
+    height: calc(100% + 1.25rem);
+  }
+  .services::after{
+    width: calc(100% - 2rem);
+    height: 1px;
+  }
 }
 
 @layer utilities{
